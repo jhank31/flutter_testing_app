@@ -1,6 +1,3 @@
-
-import 'package:dio/dio.dart';
-
 class CustomException implements Exception {
   final String message;
 
@@ -11,5 +8,3 @@ class CustomException implements Exception {
     return message;
   }
 }
-
-final Dio dio = Dio();

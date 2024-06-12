@@ -1,8 +1,12 @@
+import 'package:app_flutter_testing/di.dart';
 import 'package:app_flutter_testing/presentation/home/view/home_page.dart';
 import 'package:flutter/material.dart';
 
-void main() =>
+void main() async {
+  await init();
   runApp( const MyApp());
+
+}
 
 
 class MyApp extends StatelessWidget {
