@@ -26,7 +26,7 @@ class HomeViewModel with ChangeNotifier {
       _isLoading = true;
       notifyListeners();
       final resp = await dogRepoImpl.getRandomDog();
-      resp.fold((l) => ServerException(), (r) => _randomDog = r);
+      resp.fold((l) => throw(ServerException()), (r) => _randomDog = r);
       _isLoading = false;
       notifyListeners();
     } catch (e) {
